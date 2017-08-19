@@ -1,21 +1,22 @@
-Table Name
+# Table Name
     users
     post
     categories
-users
+#users
     userId
     userName
     email
     birthDate
     userPassword
-post
+#post
     postId
     postAuthor
     postCategory
     postTitle
     postContent
     postDate
-categories
+#categories
     postCategoryId
     categoryName
-Cause of delay: Internet connectivity issues due to heavy rainfall.
+#Cause of delay 
+    Internet connectivity issues due to heavy rainfall.
