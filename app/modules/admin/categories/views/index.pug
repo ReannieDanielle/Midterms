@@ -1,0 +1,24 @@
+extends ../../../../templates/master
+
+block content
+    <hr>
+    <h1><font color = "#C0C0C0"> Category </h1>
+    <hr>
+    
+    a.button.is-primary.pull-right(href="/admin/categories/new")
+        | Add Category
+    table.table.is-fullwidth
+        thead
+            tr
+                th ID
+                th Name
+                th Actions
+        
+        tbody
+            each category in categories
+                tr
+                    td= category.postCategoryId
+                    td: a(href=`/admin/categories/${category.postCategoryId}`)= category.categoryName
+                    td
+                        a(href=`/admin/categories/${category.postCategoryId}`): span.fa.fa-edit
+                        | &nbsp;

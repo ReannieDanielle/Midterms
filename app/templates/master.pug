@@ -1,0 +1,30 @@
+extends ./base
+
+block body
+
+    style
+        include style.css
+    nav.navbar
+        //- div.navbar-brand ExBPlate
+            //- a.navbar-item(href="/") ExBPlate
+        
+        div.navbar-menu
+            div.navbar-start
+                div.navbar-item.has-dropdown.is-hoverable
+                    a.navbar-link(href="/admin/post") Home
+                    div.navbar-dropdown.is-right
+                        a.navbar-item(href="/admin/users") Users
+                        a.navbar-item(href="/admin/home") Create Post
+                        a.navbar-item(href="/admin/categories") Category
+                        
+                        
+
+            div.navbar-end
+                div.navbar-item.has-dropdown.is-hoverable
+                    a.navbar-link: span.icon: i.fa.fa-user
+                    div.navbar-dropdown.is-right
+                        a.navbar-item(href="/settings") Settings
+                        a.navbar-item(href="/logout") Log-out
+                       
+    div.container
+        block content

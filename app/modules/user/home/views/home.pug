@@ -1,0 +1,23 @@
+//- This is how we extend a template using the 'extends' keyword
+extends ../../../../templates/masteruser
+   
+//- This is how we insert dynamic content to extended templates
+block content
+    hr
+    <h1> ForumBB </h1>
+    hr
+    
+    form(method="POST" action="/user/home" class = "newpostclass")
+
+        <p> .</p>
+        <p> .</p> 
+        <p> Write your post here.    
+        .field
+            .control                   
+                input.input(type="text", placeholder="title" name="title" )                    
+                textarea.input(type="textarea", placeholder= "Write a post" name= "textarea" class= "textarea")
+                .control    
+                    select.input(name="category")           
+                        each category in categories
+                            option(value= category.categoryName)
+            input(type="submit" value="Post" class= "posthbtn")

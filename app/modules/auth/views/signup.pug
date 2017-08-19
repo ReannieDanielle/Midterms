@@ -1,0 +1,26 @@
+extends ../../../templates/base
+
+block body
+    h1.title
+        | Sign Up
+
+    form(method="POST" action=`/admin/users?signup`)
+        .field
+            .label Name
+            .control
+                input.input(type="text" name="name" value= user ? user.userName : '')
+        .field
+            .label Birth Date
+            .control
+                input.input(type="date" name="date" min="1905-01-01" value= user ? user.birthDate : '')
+        .field
+            .label E-mail
+            .control
+                input.input(type="email" name="email" value= user ? user.email : '')
+        
+        if !user
+            .field
+                .label Password
+                .control
+                    input.input(type="password" name="password")
+        input.button.is-primary(type="submit" value="Submit")

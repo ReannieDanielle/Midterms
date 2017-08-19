@@ -1,0 +1,14 @@
+extends ../../../../templates/master
+
+block content
+    
+    <h1><font color = "#C0C0C0"> Category </h1>
+        | #{category ? 'Edit': 'Add'} 
+
+    form(method="POST" action=`/admin/categories${category ? `/${category.postCategoryId}?_method=PUT` : ''}`)
+        .field
+            .label Category Name
+            .control
+                input.input(type="hidden" name="id" value= category? category.postCategoryId: '')
+                input.input(type="text" name="name" value= category ? category.categoryName : '')
+        input.button.is-primary(type="submit" value="Submit")

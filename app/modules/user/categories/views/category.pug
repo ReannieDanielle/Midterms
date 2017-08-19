@@ -1,0 +1,12 @@
+extends ../../../../templates/masteruser
+
+block content
+    h1.title
+        | #{category ? 'Edit': 'Add'} Category
+
+    form(method="POST" action=`/user/categories${category ? `/${category.postCategoryId}?_method=PUT` : ''}`)
+        .field
+            .label Category Name
+            .control
+                input.input(type="text" name="name" value= category ? category.categoryName : '')
+        input.button.is-primary(type="submit" value="Submit")

@@ -1,0 +1,132 @@
+body {
+    background-color: 333333;
+      } 
+h1 {
+   font-family: Century 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   font-size: 35pt;
+   text-align: center;
+   }
+   
+hr {
+	height: 1px;
+    /* Set the hr color */
+    color: #C0C0C0; /* old IE */
+    background-color: #C0C0C0;
+  }
+  
+.navbar {
+    background-color: #000000;
+    color: C0C0C0;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+ /* .ani {
+    border-radius: 25px;
+    border: 2px solid #73AD21;
+    padding: 20px; 
+    background-color:white;
+    color:black;
+    margin:20px;
+    padding:20px;
+    border:5px solid mediumturquoise;  */
+} 
+textarea {
+    /* margin-left:100px; 
+    margin-right:100px;  */
+    overflow-y: scroll;
+    width: 500px;
+    height: 50px;
+    background-color: #C0C0C0;
+    color:black;
+    font-size: 0.75em;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    border: 2px solid #333333;
+}
+
+.search {
+    width: 200px;
+    height: 30px;
+}
+.searchbtn {
+    width: 55px;
+    height: 30px;
+}
+.postbtn{
+    width: 60px;
+    height: 50px;
+    float: right;
+    display:block;
+    /* margin-right:20px; */
+    clear:left;
+    top: -005px;
+    left: 410px;
+}
+.inputcategory{
+    float: right;
+    margin: 0 0 10px 10px
+}
+.categoryselection {
+   overflow:hidden;
+   width:350px;
+   -moz-border-radius: 9px 9px 9px 9px;
+   -webkit-border-radius: 9px 9px 9px 9px;
+   border-radius: 9px 9px 9px 9px;
+   box-shadow: 1px 1px 11px #330033;
+   background: #58B14C url("http://i62.tinypic.com/15xvbd5.png") no-repeat scroll 319px center;
+}
+.post{
+    width: 850px;  
+    /* height: 50px; */ 
+    border-radius: 25px;
+    padding: 10px; 
+    background-color: rgb(59,62,64);
+    color:black;
+    margin:20px;
+    padding:20px;
+    /* border:5px solid black;  */
+}
+
+.class{
+   font-family: Century 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   font-size: 12pt;
+   margin-left:5px; 
+   height: 30px;
+   color:white;
+   background-color: rgb(59,62,64);
+   border: 2px solid #333333;
+   overflow-x:scroll;
+   }
+
+.classtextarea{
+   font-family: Century 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   font-size: 12pt;
+   margin-left:5px; 
+   height: 100px;
+   color:white;
+   background-color: rgb(59,62,64);
+   border: 2px solid #333333;
+   overflow:scroll;
+   }
+/*  
+.classcategory{
+   font-family: Century 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   font-size: 10pt;
+    margin-left:10px; 
+    margin-right:100px; 
+   }
+
+.classauthor{
+   font-family: Century 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   font-size: 10pt;
+    margin-left:32px; 
+    margin-right:100px; 
+   }
+ 
+.classcontent{
+   font-family: Century 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   font-size: 10pt;
+    margin-left:25px; 
+    margin-right:100px; 
+   }   */

@@ -1,0 +1,21 @@
+extends ../../../../templates/masteruser
+
+block content
+    hr
+    <h1> ForumBB </h1>
+    hr
+    
+    form(method="POST" action="/user/post/updatepost" class = "newpostclass")
+        input.input(type="hidden" name="postAuthor" value=`${user.userId}`)
+        <p> .</p>
+        <p> .</p> 
+        <p> Edit your post here.    
+        .field
+            .control                   
+                input.input(type="text", placeholder="title" name="title" )                    
+                textarea.input(type="textarea", placeholder= "Write a post" name= "textarea" class= "textarea")
+                .control    
+                    select.input(name="category")           
+                        each category in userpostcategory
+                            option(value= category.postCategoryId)= category.categoryName
+            input(type="submit" value="Post" class= "posthbtn")

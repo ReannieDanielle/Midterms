@@ -1,0 +1,17 @@
+extends ../../../../templates/masteruser
+
+block content
+    <hr>
+    <h1><font color = "#C0C0C0"> Category </h1>
+    <hr>
+    table.table.is-fullwidth
+        thead
+            tr
+                th ID
+                th Name                
+        
+        tbody
+            each category in categories
+                tr
+                    td= category.postCategoryId
+                    td: a(href=`/user/categories/${category.postCategoryId}`)= category.categoryName

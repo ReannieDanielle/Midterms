@@ -1,0 +1,25 @@
+extends ../../../../templates/master
+   
+block content
+    hr
+    <h1><font color = "#C0C0C0"> ForumBB  </h1>
+    hr
+    
+    form(method="POST" action="/admin/home" class = "newpostclass")
+        each user in users
+            input.input(type="hidden" name="postAuthor" value= user.userName)
+        
+          
+        .field
+            .control
+                label.label.has-text-white Title                   
+                    input.input(type="text", placeholder="Title" name="title"  )    
+                label.label.has-text-white Content                                       
+                    textarea.input(type="textarea", placeholder= "Write a post" name= "textarea" class= "textarea")
+                .control    
+                label.label.has-text-white Category    
+                    select.input(name="category")           
+                        each category in categories
+                            option(value= category.categoryName)= category.categoryName
+                          
+                    input(type="submit" value="Post" class= "posthbtn")

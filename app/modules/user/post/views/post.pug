@@ -1,0 +1,22 @@
+extends ../../../../templates/masteruser
+block content
+    hr
+    <h1><font color = "#C0C0C0"> ForumBB  </font></h1>
+    hr
+    
+    each post in posts    
+        form(method="get" action= "/" class= "post")
+            .field            
+                    .control
+                        a.span.is-primary.pull-right(href=`/user/post/${post.postId}`): span.fa.fa-edit 
+                        | &nbsp;
+                        a.span.pull-right(href=`/user/post/${post.postId}/remove`): span.fa.fa-remove   
+                    label.label.has-text-white CATEGORY 
+                        input.input(type= "text" value= post.postCategory readonly class= "class")
+                    label.label.has-text-white AUTHOR
+                        input.input(type= "text" value= post.postAuthor readonly class= "class")
+                    label.label.has-text-white TITLE
+                        input.input(type= "text" value= post.postTitle readonly class= "class")
+                    label.label.has-text-white CONTENT
+                        //- input.input(type= "textarea" value= post.postContent readonly class= "class")
+                        input.textarea(type="textarea", value= post.postContent class= "classtextarea")       

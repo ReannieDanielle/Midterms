@@ -1,0 +1,28 @@
+extends ../../../../templates/master
+
+block content
+    <hr>
+    <h1><font color = "#C0C0C0"> Users </h1>
+    <hr>
+    //- a.button.is-primary.pull-right(href="/admin/users/new")
+        span.fa.fa-plus
+        | &nbsp; Add User
+    table.table.is-fullwidth
+        thead
+            tr
+                th ID
+                th Name
+                th Birth Date
+                th E-mail
+                th Actions
+        
+        tbody
+            each user in users
+                tr
+                    td= user.userId
+                    td: a(href=`/admin/users/${user.userId}`)= user.userName
+                    td= user.birthDate
+                    td= user.email
+                    td
+                        a(href=`/admin/users/${user.userId}`): span.fa.fa-edit
+                        | &nbsp;
